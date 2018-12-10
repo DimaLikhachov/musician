@@ -260,8 +260,13 @@ input.hamburger[type="checkbox"] {
   }
 
   &__description {
-    @include make-md-column(8);
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
 
+    @include make-sm-column(10);
+    @include make-sm-column-offset(1);
+
+    @include make-md-column(7);
     @include make-md-column-offset(2);
 
     text-align: center;
