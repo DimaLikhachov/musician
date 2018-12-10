@@ -1,0 +1,816 @@
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+body {
+  position: relative;
+}
+
+.rece {
+  display: none;
+  float: right;
+  justify-content: center;
+  align-content: center;
+  width: 62px;
+  height: 62px;
+  background: url("../icon/hamburger.png") no-repeat center;
+  background-size: 60%;
+  cursor: pointer;
+
+  @media screen and (max-width: $screen-sm-max) {
+    display: flex;
+  }
+}
+
+.main-nav {
+  height: 100%;
+
+  @media screen and (max-width: $screen-sm-max) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .nav {
+      position: fixed !important;
+      right: 0;
+      top: $headerHeight;
+      flex-direction: column;
+      height: 0;
+      overflow: hidden;
+      transition: height 300ms ease;
+    }
+
+    .rece {
+      display: flex;
+    }
+
+    .nav__item {
+      text-align: right;
+    }
+  }
+
+  .nav {
+    @include make-lg-column(12);
+    @include clearfix;
+    font-family: $secondaryFont;
+    line-height: $headerHeight;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+
+    &__item {
+      margin-left: 20px;
+
+      &.active .nav__link,
+      .nav__link:hover {
+        color: #51403f;
+        border-bottom: 2px solid #51403f;
+        padding-bottom: 4px;
+      }
+    }
+    &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #272726;
+      transition: all 0.1s linear;
+    }
+  }
+}
+
+input.hamburger[type="checkbox"] {
+  display: none;
+
+  &:checked + .nav {
+    height: calc(100vh - 100px);
+  }
+}
+
+.banner {
+  background: url(../images/dj_banner.png) no-repeat center top;
+  height: 1062px;
+
+  position: relative;
+  &__logo {
+    position: absolute;
+    top: 39%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+  }
+}
+
+// Discography
+.discography {
+  background: url(../images/montane.png) no-repeat center bottom;
+  padding-bottom: 540px;
+
+  $bg: url(../images/discography-heading-bg.jpg);
+  @include myheading($bg, 2, 8);
+
+  &__heading-text {
+    //
+  }
+
+  &__description {
+    @include make-md-column(8);
+
+    @include make-md-column-offset(2);
+
+    text-align: center;
+    margin-top: 67px;
+
+    // padding: 0 219px;
+  }
+}
+.event {
+  width: 100%;
+  margin-top: 159px;
+
+  &__button1 {
+    $color: #fff;
+    $bgplay: url(../images/event_butt_1.png);
+    @include event_button($bgplay, $color);
+  }
+  &__button2 {
+    $color: #000;
+    $bgplay: url(../images/event_butt_2.png);
+    @include event_button($bgplay, $color);
+  }
+  &__button3 {
+    $color: #000;
+    $bgplay: url(../images/event_butt_3.png);
+    @include event_button($bgplay, $color);
+  }
+
+  &__year1 {
+    $margin: 28px;
+    @include style_year($margin);
+  }
+  &__year2 {
+    $margin: 50px;
+    @include style_year($margin);
+  }
+  &__year3 {
+    $margin: 50px;
+    @include style_year($margin);
+  }
+  &__name {
+    text-transform: uppercase;
+    color: #000;
+  }
+  &__info {
+    @include make-md-column(5);
+    // @include make-sm-column(12);
+
+    font-family: $primaryFontBold;
+  }
+  &__description {
+    @include make-md-column(7);
+    // @include make-sm-column(12);
+  }
+  &__title {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
+  &__text {
+  }
+}
+// Concert-tours
+.concert-tours {
+  background: url(../images/concert-bg.png) no-repeat center bottom;
+  padding-bottom: 260px;
+
+  $bg: linear-gradient(
+    to right,
+    rgb(30, 87, 153) 0%,
+    rgb(98, 162, 173) 0%,
+    rgb(141, 186, 179) 100%
+  );
+  @include myheading($bg, 2, 8);
+
+  &__heading {
+    margin-top: 165px;
+  }
+
+  &__description {
+    @include make-md-column(8);
+
+    @include make-md-column-offset(2);
+
+    text-align: center;
+    margin-top: 67px;
+
+    // padding: 0 219px;
+  }
+  .event-tour {
+    width: 100%;
+    margin-top: 470px;
+
+    &__button {
+      @include transarent_button();
+    }
+    &__year {
+      $margin: 50px;
+      @include style_year($margin);
+    }
+    &__name {
+      text-transform: uppercase;
+      color: #000;
+    }
+    &__info {
+      @include make-md-column(4);
+      // @include make-sm-column(12);
+
+      font-family: $primaryFontBold;
+    }
+    &__description {
+      margin-top: 84px;
+      @include make-md-column(7);
+      // @include make-sm-column(12);
+    }
+    &__title {
+      font-size: 24px;
+      color: #000;
+      margin-bottom: 24px;
+      font-weight: bold;
+    }
+    &__text {
+    }
+  }
+}
+// latter-compositions
+.latter-compositions {
+  // background: url(../images/concert-bg.png) no-repeat center bottom;
+  padding-bottom: 260px;
+
+  $bg: #000;
+
+  @include myheading($bg, 2, 8);
+
+  &__heading {
+    margin-top: 165px;
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
+
+    @include make-sm-column(9);
+    @include make-sm-column-offset(1);
+
+    @include make-md-column(6);
+    @include make-md-column-offset(3);
+  }
+
+  &__description {
+    @include make-md-column(8);
+
+    @include make-md-column-offset(2);
+
+    text-align: center;
+    margin-top: 67px;
+
+    // padding: 0 219px;
+  }
+}
+
+.tracks {
+  @include make-xs-column-offset(1);
+  @include make-xs-column(10);
+  @include make-md-column-offset(0);
+  @include make-md-column(12);
+
+  margin-top: 166px;
+
+  // margin-bottom: 54px;
+
+  &__wrapp {
+    margin-bottom: 54px;
+
+    @media (min-width: $screen-md-min) {
+      display: flex;
+    }
+  }
+  &__icon-button {
+    margin-left: 20px;
+    width: 17px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+  }
+  &__icon-button--audio {
+    background-image: url(../icon/audio.svg);
+  }
+  &__icon-button--heart {
+    background-image: url(../icon/heart.svg);
+  }
+  &__icon-button--repost {
+    background-image: url(../icon/repost.svg);
+  }
+  &__icon-button--comment {
+    background-image: url(../icon/comment.svg);
+  }
+  &__button {
+    @include transarent_button();
+  }
+
+  &__year {
+    $margin: 50px;
+    @include style_year($margin);
+    font-family: $primaryFontBold;
+  }
+  &__name {
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 47px;
+    font-family: $primaryFontBold;
+  }
+  &__info {
+    background: #f5f6f6;
+    padding: 0 10px 35px 10px;
+    z-index: 1;
+    @include make-xs-column(12);
+    @include make-md-column(6);
+
+    position: relative;
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-left: 20px solid #f5f6f6;
+      position: absolute;
+      top: calc(50% - 10px);
+      right: -39px;
+
+      @media (max-width: $screen-sm-max) {
+        border: 20px solid transparent;
+        border-top: 20px solid #f5f6f6;
+        top: initial;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -39px;
+      }
+    }
+  }
+  &__info--order {
+    order: 2;
+
+    &::after {
+      border: 20px solid transparent;
+      border-right: 20px solid #f5f6f6;
+      left: -40px;
+      right: initial;
+
+      @media (max-width: $screen-sm-max) {
+        border: 20px solid transparent;
+        border-top: 20px solid #f5f6f6;
+        top: initial;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -39px;
+      }
+    }
+  }
+  &__iframe {
+    min-height: 422px;
+  }
+  &__video {
+    @include make-xs-column(12);
+    @include make-md-column(6);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &__title {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
+  &__text {
+  }
+}
+//slider
+.slider {
+  background: url(../images/slider.png) no-repeat center top;
+  height: 642px;
+
+  &::before {
+    content: "";
+    border: 86px solid transparent;
+    border-right: 82px solid #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    @media screen and(max-width:1224px) {
+      display: none;
+    }
+  }
+  &::after {
+    content: "";
+    border: 86px solid transparent;
+    border-left: 82px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    @media screen and(max-width:1224px) {
+      display: none;
+    }
+  }
+  height: 642px;
+  position: relative;
+}
+.chill-nation {
+  width: 100%;
+  margin-top: 166px;
+
+  &__bg {
+    overflow: hidden;
+    position: relative;
+
+    &--first {
+      $picture: url(../images/box-1.png);
+      @include box_bg($picture);
+    }
+    &--second {
+      $picture: url(../images/box-2.png);
+      @include box_bg($picture);
+    }
+    &--third {
+      $picture: url(../images/box-3.png);
+      @include box_bg($picture);
+    }
+    &--fourth {
+      $picture: url(../images/box-4.png);
+      @include box_bg($picture);
+    }
+    &--fifth {
+      $picture: url(../images/box-5.png);
+      @include box_bg($picture);
+    }
+    &--sixth {
+      $picture: url(../images/box-6.png);
+      @include box_bg($picture);
+    }
+  }
+
+  // margin-bottom: 54px;
+  &__wrapp {
+  }
+  &__button {
+    @include transarent_button();
+  }
+
+  &__year {
+    $margin: 0;
+    @include style_year($margin);
+    font-family: $primaryFontBold;
+    color: #4d4d4d;
+  }
+  &__name {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 47px;
+    font-family: $primaryFontBold;
+  }
+  &__info {
+    padding-bottom: 35px;
+
+    @include make-sm-column(6);
+    @include make-md-column(4);
+  }
+  &__title {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 24px;
+    font-weight: bold;
+  }
+  &__text {
+  }
+  &__numb {
+    font-size: 14px;
+    font-family: $primaryFont;
+    color: rgba(0, 0, 0, 0.169);
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 44px;
+    transform: scale(6);
+    -moz-transform: scale(6);
+    -webkit-transform: scale(6);
+    -ms-transform: scale(6);
+  }
+}
+//upcoming-events
+.upcoming-events {
+  background: url(../images/bridge.png) no-repeat center bottom;
+  height: 1203px;
+  padding-bottom: 1300px;
+
+  $bg: #42717e;
+  @include myheading($bg, 6, 6, left);
+
+  &__heading {
+    padding-top: 330px;
+    @include make-sm-column-offset(5);
+    @include make-sm-column(7);
+    @include make-md-column-offset(6);
+  }
+  &__heading-text {
+  }
+  &__wrapp {
+    @include make-sm-column-offset(5);
+    @include make-sm-column(7);
+    @include make-md-column-offset(6);
+  }
+  &__name {
+    font-size: 23px;
+    color: #000;
+    padding: 117px 0 24px 35px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 120px;
+      background: #000;
+      display: block;
+      margin-top: 10px;
+    }
+
+    font-family: $primaryFont;
+  }
+  &__adress {
+    padding: 0 0 0 35px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 52px;
+      width: 1px;
+      background: #000;
+      display: block;
+      margin: 20px 0 0 34px;
+    }
+
+    // padding: 0 219px;
+  }
+
+  &__year {
+    font-family: $primaryFontBold;
+    padding: 87px 0 0 35px;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 165px;
+      width: 1px;
+      background: #000;
+      display: block;
+      margin: 20px 0 0 34px;
+    }
+  }
+  &__name2 {
+    font-size: 23px;
+    color: #000;
+    padding: 193px 0 24px 35px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 120px;
+      background: #000;
+      display: block;
+      margin-top: 10px;
+    }
+
+    font-family: $primaryFont;
+  }
+  &__adress2 {
+    padding: 0 0 0 35px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 52px;
+      width: 1px;
+      background: #000;
+      display: block;
+      margin: 20px 0 0 34px;
+    }
+
+    // padding: 0 219px;
+  }
+  &__year2 {
+    font-family: $primaryFontBold;
+    padding: 87px 0 0 35px;
+  }
+}
+// Discography
+.history {
+  // padding-bottom: 540px;
+  padding-top: 160px;
+  $bg: #5b5c5a;
+
+  @include myheading($bg, 2, 8);
+
+  &__heading-text {
+    //
+  }
+
+  &__description {
+    @include make-md-column(8);
+
+    @include make-md-column-offset(2);
+
+    text-align: center;
+    margin-top: 67px;
+
+    // padding: 0 219px;
+  }
+}
+.dates-line {
+  background: url(../images/slider2.png) no-repeat center top;
+  height: 915px;
+  background-position-y: -190px;
+  padding: 150px 15px 0 15px;
+  &__text {
+    width: 211px;
+    text-align: center;
+    margin: auto;
+    margin-top: 73px;
+    color: #595c59;
+  }
+  &__box {
+    width: 100%;
+    justify-content: space-between;
+
+    display: flex;
+  }
+  &__element {
+    // margin: 0 80px 0 80px;
+    color: #b3b3b3;
+    font-size: 35.49px;
+    font-family: $secondaryFont;
+    text-transform: uppercase;
+
+    &--color {
+      color: #595c59;
+    }
+  }
+  &__bullet {
+    font-size: 29px;
+    color: #595c59;
+  }
+  &__line {
+    width: 80px;
+    height: 0;
+    border: 1px solid #000;
+    opacity: 0.28;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+
+.contact {
+  @include text();
+  @include title();
+  text-align: left;
+  height: 862px;
+  background: url(../images/tree.png) no-repeat center bottom;
+
+  &__title {
+    text-align: left;
+    @include make-xs-column-offset(2);
+    @include make-xs-column(7);
+    @include make-sm-column-offset(4);
+    @include make-sm-column(6);
+    @include make-md-column-offset(5);
+    @include make-md-column(5);
+  }
+  &__text {
+    text-align: left;
+    margin-left: 0;
+    padding-bottom: 36px;
+    @include make-xs-column-offset(2);
+    @include make-xs-column(7);
+    @include make-sm-column-offset(4);
+    @include make-sm-column(6);
+    @include make-md-column-offset(5);
+    @include make-md-column(5);
+  }
+
+  &__button {
+    font-family: $primaryFontBold;
+    color: #000;
+    width: 45px;
+    height: 56px;
+    font-weight: 700;
+    margin-top: 41px;
+    background: transparent;
+    border: none;
+  }
+
+  .form {
+    @include make-xs-column-offset(2);
+    @include make-xs-column(7);
+    @include make-sm-column-offset(4);
+    @include make-sm-column(6);
+    @include make-md-column-offset(5);
+    @include make-md-column(5);
+    background: none;
+
+    &__input {
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid #000;
+      width: 100%;
+      margin-top: 74px;
+      margin-bottom: 5px;
+    }
+  }
+  &__nav {
+    &-list {
+      @include make-xs-column(1);
+      @include make-xs-column-offset(1);
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+      position: relative;
+      border-left: 1px solid #000;
+    }
+    &-link {
+      display: block;
+      width: 30px;
+      height: 30px;
+      text-decoration: none;
+
+      margin-bottom: 50px;
+    }
+  }
+  &__link-fb {
+    background: url(../images/social-sprite.png) no-repeat 30% 17%;
+  }
+  &__link-inst {
+    background: url(../images/social-sprite.png) no-repeat 70% 35%;
+  }
+  &__link-twit {
+    background: url(../images/social-sprite.png) no-repeat 85% 85%;
+  }
+}
+
+.carousel {
+  position: relative;
+  height: 100%;
+
+  &__btn {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: black;
+
+    &--left {
+      margin-left: 20px;
+      left: 0;
+    }
+
+    &--right {
+      margin-right: 20px;
+      right: 0;
+    }
+  }
+}
+
+.carousel-inner {
+  height: 100%;
+}
+.item {
+  height: 100%;
+  &__note {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 230px;
+    color: #fff;
+    font-family: $secondaryFont;
+    font-size: 18.49px;
+  }
+  &__content {
+    margin: auto;
+    width: 515px;
+    text-align: center;
+    margin-top: 50px;
+  }
+}

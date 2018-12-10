@@ -1,0 +1,21 @@
+$grid-gutter-width: 24px;
+
+// Container sizes
+//1224px - desktop
+//1224px - tablet
+//744px - mobile
+
+//Breakpoints
+//>1400px - desktop
+//751px - 1399px - tablet
+//<750px - mobile
+
+// Breakpoints
+$screen-sm: 750px;
+$screen-md: 1224px;
+$screen-lg: 1400px; //lg-min(desctop-large)
+
+// Container sizes
+$container-tablet: (720px + $grid-gutter-width); // Mobile
+$container-desktop: (1200px + $grid-gutter-width); // Tablet
+$container-large-desktop: (1200px + $grid-gutter-width); // Desktop
