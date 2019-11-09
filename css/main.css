@@ -1,0 +1,62 @@
+/*
+Error: File to import not found or unreadable: ../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables.
+       Load path: /Users/gasya/Desktop/musician/scss
+        on line 5 of scss/main.scss
+
+1: @import "reset";
+2: @import "normalize";
+3: @import "bootstrap-overrides";
+4: 
+5: @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+6: @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+7: //  @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+8: @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+9: @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+10: @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+Backtrace:
+scss/main.scss:5
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/import_node.rb:45:in `import'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:294:in `watch'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin.rb:109:in `method_missing'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+/Users/gasya/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/sass-3.4.24/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:22:in `load'
+/usr/local/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables.\A        Load path: /Users/gasya/Desktop/musician/scss\A         on line 5 of scss/main.scss\A \A 1: @import \"reset\";\A 2: @import \"normalize\";\A 3: @import \"bootstrap-overrides\";\A 4: \A 5: @import \"../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables\";\A 6: @import \"../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins\";\A 7: //  @import \"../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding\";\A 8: @import \"../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid\";\A 9: @import \"../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities\";\A 10: @import \"../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel\";"; }

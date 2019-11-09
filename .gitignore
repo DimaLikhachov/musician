@@ -78,5 +78,3 @@ typings/
 # sass cache
 .sass-cache/
 
-#css build
-css
